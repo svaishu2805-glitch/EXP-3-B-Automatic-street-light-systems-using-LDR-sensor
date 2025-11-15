@@ -11,7 +11,7 @@
 	Photoresistor
   
 ## Circuit Diagram:
-
+<img width="1455" height="780" alt="image" src="https://github.com/user-attachments/assets/bd918df1-7f86-425f-9e3a-ac1cfffab89d" />
 
 ## Theory :
 
@@ -65,11 +65,31 @@ o	The middle point (between LDR and resistor) connects to the Arduino analog inp
 •	Save the Circuit: Click "Save" to keep your circuit design and code for future use.
 
 ## Code:
+// C++ code
+//
+int sensorValue = 0;
 
+void setup()
+{
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
 
+  pinMode(9, OUTPUT);
+}
+
+void loop()
+{
+  // read the value from the sensor
+  sensorValue = analogRead(A0);
+  // print the sensor reading so you know its range
+  Serial.println(sensorValue);
+  // map the sensor reading to a range for the LED
+  analogWrite(9, map(sensorValue, 0, 1023, 255, 0));
+  delay(100); // Wait for 100 millisecond(s)
+}
 
 ## Output:
- 
-
+https://github.com/user-attachments/assets/c9bdee33-625f-4caa-8f11-b5d89039d32b
 
 ## Result:
+Thus the Automatic street light systems using LDR sensor stimulated by Tinkercad
