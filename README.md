@@ -1,6 +1,7 @@
 # EXP-3-B-Automatic-street-light-systems-using-LDR-sensor
 
 ## Aim: 
+To control an LED based on ambient ligth intensity using an LDR and Arduino UNO
 
 ## Hardware / Software Tools required:
 
